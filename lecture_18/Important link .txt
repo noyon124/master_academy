@@ -1,0 +1,14 @@
+কোডিং বুট ক্যাম্প  :: golang দিয়ে তৈরী প্রথম ওয়েবসাইট
+সপ্তাহ : ০৯
+সর্বমোট ভিডিও লেকচার : ১৮
+
+golang http template ব্যবহার করে আমরা প্রথম ওয়েবসাইট তৈরী করা দেখিয়েছি
+একটি html পেজ কে ছোট ছোট কম্পোনেন্ট এ ভাগ করার জন্য block সিনটেক্স ব্যবহার করা হয়
+
+golang html template এর ভিউ ইঞ্জিন হচ্ছে এই block
+বা block হচ্ছে html template এর ভিউ ইঞ্জিন
+
+Blocks is a, simple, Go-idiomatic view engine based on html/template
+
+golang template নিয়ে আরো বিস্তারিত শেখার জন্য এই ভিডিও গুলো দেখার জন্য বিশেষ ভাবে বলা হল:- 
+https://www.youtube.com/playlist?list=PLZij6bgEHkTV2bk485fynqlK2SrTD2zkb
