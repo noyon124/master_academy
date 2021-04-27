@@ -1,10 +1,40 @@
 package main
 
 import (
+	"database/sql"
 	"fmt"
 	"html/template"
 	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 )
+
+func init() {
+
+	// Open up our database connection.
+	// I've set up a database on my local machine using phpmyadmin.
+	// The database is called testDb
+	db, err := sql.Open("mysql", "root:noyon124mysql@tcp(127.0.0.1:3306)/hosting_db")
+
+	// if there is an error opening the connection, handle it
+	if err != nil {
+		panic(err.Error())
+	}
+
+	// defer the close till after the main function has finished
+	// executing
+	defer db.Close()
+
+	insert, err := db.Query("INSERT INTO `request` (`id`, `name`, `company`, `email`, `status`) VALUES (NULL, 'Noyan', 'Master_academy', 'noyon123@gmail.com ', '1');")
+
+	// if there is an error inserting, handle it
+	if err != nil {
+		panic(err.Error())
+	}
+	defer insert.Close()
+
+	fmt.Println("db connection succesfully")
+}
 
 func main() {
 
